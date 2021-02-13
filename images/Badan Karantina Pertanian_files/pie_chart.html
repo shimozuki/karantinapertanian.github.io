@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://karantina.pertanian.go.id/pie_chart.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="shortcut icon" type="image/png" href="https://karantina.pertanian.go.id/images/favicon.png">
+<link rel="stylesheet" type="text/css" href="./bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="./font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="templates/barantan/assets/css/animate.css">
+<link rel="stylesheet" type="text/css" href="templates/barantan/assets/css/font.css">
+<link rel="stylesheet" type="text/css" href="templates/barantan/assets/css/li-scroller.css">
+<link rel="stylesheet" type="text/css" href="templates/barantan/assets/css/slick.css">
+<link rel="stylesheet" type="text/css" href="templates/barantan/assets/css/jquery.fancybox.css">-->
+<link rel="stylesheet" type="text/css" href="./theme.css">
+<link rel="stylesheet" type="text/css" href="./style.css">
+<script type="text/javascript" src="./jquery.min.js"></script> 
+<script type="text/javascript" src="./highcharts.js"></script> 
+				<script type="text/javascript">
+				   $(document).ready(function () {
+						// Radialize the colors
+						Highcharts.getOptions().colors = Highcharts.map(Highcharts.getOptions().colors, function (color) {
+							return {
+								radialGradient: {
+									cx: 0.5,
+									cy: 0.3,
+									r: 0.7
+								},
+								stops: [
+									[0, color],
+									[1, Highcharts.Color(color).brighten(-0.3).get('rgb')] // darken
+								]
+							};
+						});
+						
+						// Build the chart
+						Highcharts.chart('chart', {
+							chart: {
+								plotBackgroundColor: null,
+								plotBorderWidth: null,
+								plotShadow: false,
+								type: 'pie'
+							},
+							title: {
+								text: 'Frekuensi Pemeriksaan Karantina Pertanian Tanggal 12/02/2021',
+								floating: false,
+								y: 20,
+								style: {
+									fontSize: 18,
+									fontFamily: '\'Oswald\', sans-serif',
+									lineHeight: '25px'
+								}
+								
+							},
+							tooltip: {
+								formatter: function () {
+									var sliceIndex = this.point.index;
+									var sliceName = this.series.chart.axes[0].categories[sliceIndex];
+									
+									return sliceName + ': ' + this.y + ' (' + Highcharts.numberFormat(this.percentage, 2) + '%)</b>';
+								}
+								//	pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+							},
+							plotOptions: {
+								pie: {
+									allowPointSelect: true,
+									cursor: 'pointer',
+									dataLabels: {
+										enabled: true,
+										format: '{point.y:,.0f}',
+										style: {
+											color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black',
+											fontSize: 12,
+											fontFamily: '\'Oswald\', sans-serif'
+										},
+										connectorColor: 'silver',
+										distance: -30
+									},
+									showInLegend: true
+								}
+							},
+							legend: {
+								enabled: true,
+								labelFormatter: function() {
+									var legendIndex = this.index;
+									var legendName = this.series.chart.axes[0].categories[legendIndex];
+
+									return legendName;
+								}
+							},
+							xAxis: {
+								categories: ["EKSPOR", "IMPOR", "DOMESTIK MASUK", "DOMESTIK KELUAR"],
+							},
+							series: [{
+								name: 'Frekuensi',
+								colorByPoint: true,
+								data: [557825, {y: 361041,sliced: true,selected: true}, 1069142, 2484487]
+							}]
+						});
+						
+					});
+				</script>
+
+</head>	
+<body>			
+
+<div id="chart" data-highcharts-chart="0"><div id="highcharts-910jgcz-0" class="highcharts-container " style="position: relative; overflow: hidden; width: 326px; height: 400px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg version="1.1" class="highcharts-root" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="326" height="400"><desc>Created with Highcharts 5.0.7</desc><defs><radialgradient cx="0.5" cy="0.3" r="0.7" id="highcharts-910jgcz-1"><stop offset="0" stop-color="#7cb5ec" stop-opacity="1"></stop><stop offset="1" stop-color="rgb(48,105,160)" stop-opacity="1"></stop></radialgradient><radialgradient cx="0.5" cy="0.3" r="0.7" id="highcharts-910jgcz-2"><stop offset="0" stop-color="#434348" stop-opacity="1"></stop><stop offset="1" stop-color="rgb(0,0,0)" stop-opacity="1"></stop></radialgradient><radialgradient cx="0.5" cy="0.3" r="0.7" id="highcharts-910jgcz-3"><stop offset="0" stop-color="#90ed7d" stop-opacity="1"></stop><stop offset="1" stop-color="rgb(68,161,49)" stop-opacity="1"></stop></radialgradient><radialgradient cx="0.5" cy="0.3" r="0.7" id="highcharts-910jgcz-4"><stop offset="0" stop-color="#f7a35c" stop-opacity="1"></stop><stop offset="1" stop-color="rgb(171,87,16)" stop-opacity="1"></stop></radialgradient><clippath id="highcharts-910jgcz-5"><rect x="0" y="0" width="306" height="225" fill="none"></rect></clippath><radialgradient cx="153" cy="71.5" r="143.5" id="highcharts-910jgcz-6" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7cb5ec" stop-opacity="1"></stop><stop offset="1" stop-color="rgb(48,105,160)" stop-opacity="1"></stop></radialgradient><radialgradient cx="153" cy="71.5" r="143.5" id="highcharts-910jgcz-7" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#434348" stop-opacity="1"></stop><stop offset="1" stop-color="rgb(0,0,0)" stop-opacity="1"></stop></radialgradient><radialgradient cx="153" cy="71.5" r="143.5" id="highcharts-910jgcz-8" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#90ed7d" stop-opacity="1"></stop><stop offset="1" stop-color="rgb(68,161,49)" stop-opacity="1"></stop></radialgradient><radialgradient cx="153" cy="71.5" r="143.5" id="highcharts-910jgcz-9" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f7a35c" stop-opacity="1"></stop><stop offset="1" stop-color="rgb(171,87,16)" stop-opacity="1"></stop></radialgradient><radialgradient cx="153" cy="71.5" r="143.5" id="highcharts-910jgcz-11" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7cb5ec" stop-opacity="1"></stop><stop offset="1" stop-color="rgb(48,105,160)" stop-opacity="1"></stop></radialgradient><radialgradient cx="153" cy="71.5" r="143.5" id="highcharts-910jgcz-12" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#434348" stop-opacity="1"></stop><stop offset="1" stop-color="rgb(0,0,0)" stop-opacity="1"></stop></radialgradient><radialgradient cx="153" cy="71.5" r="143.5" id="highcharts-910jgcz-13" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#90ed7d" stop-opacity="1"></stop><stop offset="1" stop-color="rgb(68,161,49)" stop-opacity="1"></stop></radialgradient><radialgradient cx="153" cy="71.5" r="143.5" id="highcharts-910jgcz-14" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f7a35c" stop-opacity="1"></stop><stop offset="1" stop-color="rgb(171,87,16)" stop-opacity="1"></stop></radialgradient></defs><rect fill="#ffffff" class="highcharts-background" x="0" y="0" width="326" height="400" rx="0" ry="0"></rect><rect fill="none" class="highcharts-plot-background" x="10" y="95" width="306" height="225"></rect><rect fill="none" class="highcharts-plot-border" x="10" y="95" width="306" height="225"></rect><g class="highcharts-series-group"><g class="highcharts-series highcharts-series-0 highcharts-pie-series highcharts-color-undefined highcharts-tracker" transform="translate(10,95) scale(1 1)" style="cursor:pointer;"><path fill="url(#highcharts-910jgcz-11)" d="M 152.97912349662124 10.000002125992182 A 102.5 102.5 0 0 1 225.28962288987663 39.833223393084026 L 153 112.5 A 0 0 0 0 0 153 112.5 Z" class="highcharts-point highcharts-color-0" stroke="#ffffff" stroke-width="1" stroke-linejoin="round"></path><path fill="url(#highcharts-910jgcz-12)" d="M 225.36225350956397 39.905549337310916 A 102.5 102.5 0 0 1 251.47980672351017 84.07505201939533 L 153 112.5 A 0 0 0 0 0 153 112.5 Z" class="highcharts-point highcharts-point-select highcharts-color-1" transform="translate(9,-5)" stroke="#ffffff" stroke-width="1" stroke-linejoin="round"></path><path fill="url(#highcharts-910jgcz-13)" d="M 251.50818242685403 84.17354602217834 A 102.5 102.5 0 0 1 188.12741371757204 208.7928595769932 L 153 112.5 A 0 0 0 0 0 153 112.5 Z" class="highcharts-point highcharts-color-2" stroke="#ffffff" stroke-width="1" stroke-linejoin="round"></path><path fill="url(#highcharts-910jgcz-14)" d="M 188.03110331033844 208.82793883843044 A 102.5 102.5 0 1 1 152.85762955634766 10.000098874892686 L 153 112.5 A 0 0 0 1 0 153 112.5 Z" class="highcharts-point highcharts-color-3" stroke="#ffffff" stroke-width="1" stroke-linejoin="round"></path></g><g class="highcharts-markers highcharts-series-0 highcharts-pie-series highcharts-color-undefined " transform="translate(10,95) scale(1 1)"></g></g><text x="163" text-anchor="middle" class="highcharts-title" style="color:#333333;font-size:18;font-family:&#39;Oswald&#39;, sans-serif;line-height:25px;fill:#333333;" y="30"><tspan>Frekuensi Pemeriksaan</tspan><tspan dy="25" x="163">Karantina Pertanian Tanggal</tspan><tspan dy="25" x="163">12/02/2021</tspan><title>Frekuensi Pemeriksaan Karantina Pertanian Tanggal 12/02/2021</title></text><g class="highcharts-data-labels highcharts-series-0 highcharts-pie-series highcharts-color-undefined highcharts-tracker" transform="translate(10,95) scale(1 1)" opacity="1" style="cursor:pointer;" visibility="visible"><g class="highcharts-label highcharts-data-label highcharts-data-label-color-0 " style="cursor:pointer;" transform="translate(153,35)"><text x="5" style="font-size:12;font-weight:bold;font-family:&#39;Oswald&#39;, sans-serif;color:black;text-outline:1px contrast;fill:black;" y="17"><tspan x="5" y="17" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round" style="">557 825</tspan><tspan x="5" y="17">557 825</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-1 " style="cursor:pointer;" transform="translate(188,66)"><text x="5" style="font-size:12;font-weight:bold;font-family:&#39;Oswald&#39;, sans-serif;color:black;text-outline:1px contrast;fill:black;" y="17"><tspan x="5" y="17" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round" style="">361 041</tspan><tspan x="5" y="17">361 041</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-2 " style="cursor:pointer;" transform="translate(185,135)"><text x="5" style="font-size:12;font-weight:bold;font-family:&#39;Oswald&#39;, sans-serif;color:black;text-outline:1px contrast;fill:black;" y="17"><tspan x="5" y="17" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round" style="">1 069 142</tspan><tspan x="5" y="17">1 069 142</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-3 " style="cursor:pointer;" transform="translate(49,115)"><text x="5" style="font-size:12;font-weight:bold;font-family:&#39;Oswald&#39;, sans-serif;color:black;text-outline:1px contrast;fill:black;" y="17"><tspan x="5" y="17" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round" style="">2 484 487</tspan><tspan x="5" y="17">2 484 487</tspan></text></g></g><g class="highcharts-legend" transform="translate(77,332)"><rect fill="none" class="highcharts-legend-box" rx="0" ry="0" x="0" y="0" width="172" height="53" visibility="visible"></rect><g><g><g class="highcharts-legend-item highcharts-pie-series highcharts-color-0" transform="translate(8,3)"><text x="21" style="color:#333333;font-size:12px;font-weight:bold;cursor:pointer;fill:#333333;" text-anchor="start" y="15">EKSPOR</text><rect x="2" y="4" width="12" height="12" fill="url(#highcharts-910jgcz-1)" rx="6" ry="6" class="highcharts-point"></rect></g><g class="highcharts-legend-item highcharts-pie-series highcharts-color-1" transform="translate(102.015625,3)"><text x="21" y="15" style="color:#333333;font-size:12px;font-weight:bold;cursor:pointer;fill:#333333;" text-anchor="start">IMPOR</text><rect x="2" y="4" width="12" height="12" fill="url(#highcharts-910jgcz-2)" rx="6" ry="6" class="highcharts-point"></rect></g><g class="highcharts-legend-item highcharts-pie-series highcharts-color-2" transform="translate(8,17)"><text x="21" y="15" style="color:#333333;font-size:12px;font-weight:bold;cursor:pointer;fill:#333333;" text-anchor="start"><tspan>DOMESTIK MASUK</tspan></text><rect x="2" y="4" width="12" height="12" fill="url(#highcharts-910jgcz-3)" rx="6" ry="6" class="highcharts-point"></rect></g><g class="highcharts-legend-item highcharts-pie-series highcharts-color-3" transform="translate(8,31)"><text x="21" y="15" style="color:#333333;font-size:12px;font-weight:bold;cursor:pointer;fill:#333333;" text-anchor="start"><tspan>DOMESTIK KELUAR</tspan></text><rect x="2" y="4" width="12" height="12" fill="url(#highcharts-910jgcz-4)" rx="6" ry="6" class="highcharts-point"></rect></g></g></g></g><text x="316" class="highcharts-credits" text-anchor="end" style="cursor:pointer;color:#999999;font-size:9px;fill:#999999;" y="395"></text></svg></div></div>
+
+<script src="./custom.js"></script>
+
+</body></html>
